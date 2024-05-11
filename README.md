@@ -1,4 +1,4 @@
-### Descripción del Proyecto: Wordris - Tetris con Palabras en C++
+### Descripción del Proyecto: Tetris con Palabras en C++
 
 #### Introducción
 Tetris de palabras es una innovadora adaptación del clásico juego de Tetris, transformado en una experiencia interactiva de formación de palabras. Este proyecto se ha desarrollado utilizando C++, aprovechando las características robustas del lenguaje para garantizar una experiencia de juego fluida y responsiva. El objetivo principal de Wordris es combinar la mecánica de juego del Tetris tradicional con un desafío lingüístico, alentando a los jugadores a formar palabras con las letras que caen, en lugar de completar líneas con bloques geométricos.
