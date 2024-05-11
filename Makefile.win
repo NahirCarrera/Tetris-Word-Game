@@ -1,0 +1,58 @@
+# Project: Tetris
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = Vista/main.o Controlador/TetrisGame.o Controlador/Juego.o Controlador/ListaSimple.o Controlador/Pieza.o Controlador/Singleton.o Herramientas/ControladorMenu.o Herramientas/ListaCircularDoble.o Herramientas/Menu.o Herramientas/NodoDoble.o Herramientas/Opcion.o
+LINKOBJ  = Vista/main.o Controlador/TetrisGame.o Controlador/Juego.o Controlador/ListaSimple.o Controlador/Pieza.o Controlador/Singleton.o Herramientas/ControladorMenu.o Herramientas/ListaCircularDoble.o Herramientas/Menu.o Herramientas/NodoDoble.o Herramientas/Opcion.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib32" -static-libgcc -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -m32 -g3
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = TetrisDePalabras.exe
+CXXFLAGS = $(CXXINCS) -m32 -g3
+CFLAGS   = $(INCS) -m32 -g3
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\DevCpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Vista/main.o: Vista/main.cpp
+	$(CPP) -c Vista/main.cpp -o Vista/main.o $(CXXFLAGS)
+
+Controlador/TetrisGame.o: Controlador/TetrisGame.cpp
+	$(CPP) -c Controlador/TetrisGame.cpp -o Controlador/TetrisGame.o $(CXXFLAGS)
+
+Controlador/Juego.o: Controlador/Juego.cpp
+	$(CPP) -c Controlador/Juego.cpp -o Controlador/Juego.o $(CXXFLAGS)
+
+Controlador/ListaSimple.o: Controlador/ListaSimple.cpp
+	$(CPP) -c Controlador/ListaSimple.cpp -o Controlador/ListaSimple.o $(CXXFLAGS)
+
+Controlador/Pieza.o: Controlador/Pieza.cpp
+	$(CPP) -c Controlador/Pieza.cpp -o Controlador/Pieza.o $(CXXFLAGS)
+
+Controlador/Singleton.o: Controlador/Singleton.cpp
+	$(CPP) -c Controlador/Singleton.cpp -o Controlador/Singleton.o $(CXXFLAGS)
+
+Herramientas/ControladorMenu.o: Herramientas/ControladorMenu.cpp
+	$(CPP) -c Herramientas/ControladorMenu.cpp -o Herramientas/ControladorMenu.o $(CXXFLAGS)
+
+Herramientas/ListaCircularDoble.o: Herramientas/ListaCircularDoble.cpp
+	$(CPP) -c Herramientas/ListaCircularDoble.cpp -o Herramientas/ListaCircularDoble.o $(CXXFLAGS)
+
+Herramientas/Menu.o: Herramientas/Menu.cpp
+	$(CPP) -c Herramientas/Menu.cpp -o Herramientas/Menu.o $(CXXFLAGS)
+
+Herramientas/NodoDoble.o: Herramientas/NodoDoble.cpp
+	$(CPP) -c Herramientas/NodoDoble.cpp -o Herramientas/NodoDoble.o $(CXXFLAGS)
+
+Herramientas/Opcion.o: Herramientas/Opcion.cpp
+	$(CPP) -c Herramientas/Opcion.cpp -o Herramientas/Opcion.o $(CXXFLAGS)
